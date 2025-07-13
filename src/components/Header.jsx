@@ -68,10 +68,19 @@ const Header = () => {
                                 className="filter drop-shadow-lg"
                             />
                         </a>
+                        <a 
+                            href="#accueil" 
+                            onClick={(e) => {
+                                e.preventDefault();
+                                scrollToSection("#accueil");
+                            }}
+                            className="block cursor-pointer transition-transform duration-300 hover:scale-105"
+                        >
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-amber-500 font-bold text-xl hidden sm:block tracking-wide transition-all duration-300 group-hover:from-yellow-300 group-hover:to-amber-400"
                               style={{ fontFamily: 'Playfair Display, serif' }}>
                             Lamsset L'wkhiyet
                         </span>
+                        </a>
                     </div>
 
                     {/* Desktop Navigation */}

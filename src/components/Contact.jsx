@@ -1,30 +1,28 @@
-import { useState } from "react";
-
 const Contact = () => {
   const contactInfo = [
     {
       icon: "📧",
       title: "Email",
-      value: "contact@lamssetlawkhiyat.com",
-      link: "mailto:contact@lamssetlawkhiyat.com"
+      value: "lamssetlawkhiyat@gmail.com",
+      link: "mailto:lamssetlawkhiyat@gmail.com"
     },
     {
       icon: "📱",
       title: "Téléphone",
-      value: "+33 1 23 45 67 89",
-      link: "tel:+33123456789"
+      value: "+213 5 41 42 27 46",
+      link: "tel:+213541422746"
     },
     {
       icon: "📍",
       title: "Adresse",
-      value: "Paris, France",
-      link: "#"
+      value: "1er étage, Al Ayla Mall, Café Chergui",
+      link: "https://maps.app.goo.gl/?"
     },
     {
-      icon: "💼",
-      title: "LinkedIn",
-      value: "lamsset-lawkhiyat",
-      link: "https://linkedin.com/in/lamsset-lawkhiyat"
+      icon: "📸​",
+      title: "Instagram",
+      value: "lamsset_l.wkhiyat",
+      link: "https://www.instagram.com/lamsset_l.wkhiyat/"
     }
   ];
 
@@ -87,16 +85,16 @@ const Contact = () => {
               </h4>
               <div className="space-y-4 text-amber-100/90">
                 <div className="flex justify-between items-center py-3 border-b border-amber-200/10">
-                  <span className="font-medium text-lg">Lundi - Vendredi</span>
-                  <span className="text-amber-200 font-light text-lg">9h00 - 18h00</span>
+                  <span className="font-medium text-lg">Dimanche - jeudi</span>
+                  <span className="text-amber-200 font-light text-lg">9h00 - 20h00</span>
                 </div>
                 <div className="flex justify-between items-center py-3 border-b border-amber-200/10">
-                  <span className="font-medium text-lg">Samedi</span>
-                  <span className="text-amber-200 font-light text-lg">10h00 - 16h00</span>
+                  <span className="font-medium text-lg">Vendredi</span>
+                  <span className="text-amber-200 font-light text-lg">12h00 - 20h00</span>
                 </div>
                 <div className="flex justify-between items-center py-3">
-                  <span className="font-medium text-lg">Dimanche</span>
-                  <span className="text-amber-200/60 font-light text-lg">Fermé</span>
+                  <span className="font-medium text-lg">Samdi</span>
+                  <span className="text-amber-200 font-light text-lg">12h00 - 20h00</span>
                 </div>
               </div>
             </div>
