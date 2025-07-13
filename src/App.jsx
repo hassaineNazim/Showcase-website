@@ -2,7 +2,6 @@ import Header from "./components/Header";
 import Accueil from "./components/Accueil";
 import NosCreations from "./components/NosCreations";
 import NotreSavoirFaire from "./components/NotreSavoirFaire";
-import APropos from "./components/APropos";
 import Contact from "./components/Contact";
 
 const App = () => {
@@ -13,7 +12,6 @@ const App = () => {
         <Accueil />
         <NosCreations />
         <NotreSavoirFaire />
-        <APropos />
         <Contact />
       </main>
     </>
