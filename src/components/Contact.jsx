@@ -85,15 +85,12 @@ const Contact = () => {
               </h4>
               <div className="space-y-4 text-amber-100/90">
                 <div className="flex justify-between items-center py-3 border-b border-amber-200/10">
-                  <span className="font-medium text-lg">Dimanche - jeudi</span>
+                  <span className="font-medium text-lg">Dimanche - Jeudi</span>
                   <span className="text-amber-200 font-light text-lg">9h00 - 20h00</span>
                 </div>
-                <div className="flex justify-between items-center py-3 border-b border-amber-200/10">
-                  <span className="font-medium text-lg">Vendredi</span>
-                  <span className="text-amber-200 font-light text-lg">12h00 - 20h00</span>
-                </div>
+                
                 <div className="flex justify-between items-center py-3">
-                  <span className="font-medium text-lg">Samdi</span>
+                  <span className="font-medium text-lg">Vendredu + Samdi</span>
                   <span className="text-amber-200 font-light text-lg">12h00 - 20h00</span>
                 </div>
               </div>

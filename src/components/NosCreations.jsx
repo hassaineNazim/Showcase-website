@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const NosCreations = () => {
   const creations = [
     {
@@ -49,6 +51,8 @@ const NosCreations = () => {
       featured: false
     }
   ];
+
+  const [selectedCreation, setSelectedCreation] = useState(null);
 
   return (
     <section id="nos-creations" className="py-24 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
@@ -110,7 +114,7 @@ const NosCreations = () => {
                     {creation.description}
                   </p>
                   
-                  <button className="group/btn inline-flex items-center px-8 py-4 bg-gradient-to-r from-amber-700 to-yellow-600 text-white rounded-full font-semibold text-lg tracking-wide transition-all duration-300 hover:from-amber-600 hover:to-yellow-500 hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/25"
+                  <button onClick={() => setSelectedCreation(creation)} className="group/btn inline-flex items-center px-8 py-4 bg-gradient-to-r from-amber-700 to-yellow-600 text-white rounded-full font-semibold text-lg tracking-wide transition-all duration-300 hover:from-amber-600 hover:to-yellow-500 hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/25"
                           style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 500 }}>
                     <span>Découvrir cette création</span>
                     <svg className="w-5 h-5 ml-3 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -141,7 +145,7 @@ const NosCreations = () => {
                 
                 {/* Overlay au survol */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <button className="px-6 py-3 bg-white/90 text-black rounded-full font-semibold text-sm tracking-wide hover:bg-white transition-colors duration-300"
+                  <button onClick={() => setSelectedCreation(creation)} className="px-6 py-3 bg-white/90 text-black rounded-full font-semibold text-sm tracking-wide hover:bg-white transition-colors duration-300"
                           style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 500 }}>
                     Voir les détails
                   </button>
@@ -167,7 +171,7 @@ const NosCreations = () => {
                   {creation.description}
                 </p>
                 
-                <button className="w-full py-3 border-2 border-yellow-400/60 text-yellow-400 rounded-xl font-medium text-sm tracking-wide hover:bg-yellow-400/10 hover:border-yellow-400 transition-all duration-300 group/btn"
+                <button onClick={() => setSelectedCreation(creation)} className="w-full py-3 border-2 border-yellow-400/60 text-yellow-400 rounded-xl font-medium text-sm tracking-wide hover:bg-yellow-400/10 hover:border-yellow-400 transition-all duration-300 group/btn"
                         style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 500 }}>
                   <span className="group-hover/btn:text-yellow-300 transition-colors duration-300">
                     Voir la création
@@ -178,15 +182,22 @@ const NosCreations = () => {
           ))}
         </div>
 
-        {/* Bouton "Charger plus" */}
-        <div className="text-center mt-16">
-          <button className="px-10 py-4 border-2 border-yellow-400/60 text-yellow-400 rounded-full font-medium text-lg tracking-wide hover:bg-yellow-400/10 hover:border-yellow-400 transition-all duration-300 group"
-                  style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 500 }}>
-            <span className="group-hover:text-yellow-300 transition-colors duration-300">
-              Charger plus de créations
-            </span>
-          </button>
-        </div>
+        {/* Modale d'affichage de la création sélectionnée */}
+        {selectedCreation && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm" onClick={() => setSelectedCreation(null)}>
+            <div className="relative bg-black rounded-3xl shadow-2xl max-w-2xl w-full mx-4" onClick={e => e.stopPropagation()}>
+              <button onClick={() => setSelectedCreation(null)} className="absolute top-4 right-4 text-white text-2xl font-bold bg-black/60 rounded-full w-10 h-10 flex items-center justify-center hover:bg-black/80 transition-colors" aria-label="Fermer">
+                &times;
+              </button>
+              <img src={selectedCreation.image} alt={selectedCreation.title} className="w-full h-96 object-cover rounded-t-3xl" />
+              <div className="p-8">
+                <h3 className="text-3xl font-bold text-white mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>{selectedCreation.title}</h3>
+                <p className="text-lg text-gray-300" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300 }}>{selectedCreation.description}</p>
+              </div>
+            </div>
+          </div>
+        )}
+
       </div>
     </section>
   );

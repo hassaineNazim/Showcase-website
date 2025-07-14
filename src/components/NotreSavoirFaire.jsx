@@ -141,7 +141,7 @@ const NotreSavoirFaire = () => {
                   <span className="text-white font-bold text-2xl" style={{ fontFamily: 'Playfair Display, serif' }}>
                     5+
                   </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-amber-600 to-yellow-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-amber-600 to-yellow-500 rounded-full opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
                 </div>
                 <h4 className="text-white font-semibold mb-3 text-lg" style={{ fontFamily: 'Playfair Display, serif' }}>
                   Années d'expérience
@@ -156,7 +156,7 @@ const NotreSavoirFaire = () => {
                   <span className="text-white font-bold text-2xl" style={{ fontFamily: 'Playfair Display, serif' }}>
                     50+
                   </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
                 </div>
                 <h4 className="text-white font-semibold mb-3 text-lg" style={{ fontFamily: 'Playfair Display, serif' }}>
                   Créations réalisées
@@ -171,7 +171,7 @@ const NotreSavoirFaire = () => {
                   <span className="text-white font-bold text-2xl" style={{ fontFamily: 'Playfair Display, serif' }}>
                     100%
                   </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-yellow-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-yellow-400 rounded-full opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
                 </div>
                 <h4 className="text-white font-semibold mb-3 text-lg" style={{ fontFamily: 'Playfair Display, serif' }}>
                   Satisfaction client
@@ -182,16 +182,7 @@ const NotreSavoirFaire = () => {
               </div>
             </div>
 
-            {/* Bouton CTA */}
-            <div className="text-center mt-12">
-              <button className="group inline-flex items-center px-10 py-4 bg-gradient-to-r from-amber-700 to-yellow-600 text-white rounded-full font-semibold text-lg tracking-wide transition-all duration-300 hover:from-amber-600 hover:to-yellow-500 hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/25"
-                      style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 500 }}>
-                <span>Découvrir notre processus</span>
-                <svg className="w-5 h-5 ml-3 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </button>
-            </div>
+          
           </div>
         </div>
       </div>
